@@ -32,13 +32,21 @@ class ReamData: Object {
     }
 }
 
+private let cellId = "cellId"
+
 class ViewController: UITableViewController {
+    
     var aptViewModel = ZJAptViewModel()
-    
     var result: Results<ReamData>?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(ViewCell.self, forCellReuseIdentifier: cellId)
+        getData()
+    }
+}
+
+extension ViewController {
+    fileprivate func getData() {
         aptViewModel.loadApt { (_) in
             try! uiRealm.write {
                 for (index, data) in self.aptViewModel.aptProperties.enumerated() {
@@ -51,15 +59,25 @@ class ViewController: UITableViewController {
                     reamData.id = index
                     uiRealm.add(reamData, update: true)
                 }
-                self.result = uiRealm.objects(ReamData.self).sorted(byKeyPath: "price")
-                self.tableView.reloadData()
+                self.sortbyBathroom()
             }
-            
         }
-        
     }
-
-
+    
+    fileprivate func sortbyid() {
+        self.result = uiRealm.objects(ReamData.self).sorted(byKeyPath: "id")
+        self.tableView.reloadData()
+    }
+    
+    fileprivate func sortbyPrice() {
+        self.result = uiRealm.objects(ReamData.self).sorted(byKeyPath: "price")
+        self.tableView.reloadData()
+    }
+    
+    fileprivate func sortbyBathroom() {
+        self.result = uiRealm.objects(ReamData.self).filter("bathroom != '独立卫浴'")
+        self.tableView.reloadData()
+    }
 }
 
 extension ViewController {
@@ -68,9 +86,10 @@ extension ViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId") as! UITableViewCell
-        cell.textLabel?.text = String(result![indexPath.item].price)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! ViewCell
+        cell.data = result![indexPath.item]
         return cell
     }
+    
 }
 

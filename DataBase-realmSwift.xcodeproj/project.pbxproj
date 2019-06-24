@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3848693D22BDB28D00ED43F4 /* ZJAptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848693C22BDB28D00ED43F4 /* ZJAptViewModel.swift */; };
 		3848693F22BDB29700ED43F4 /* ZJAddAptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848693E22BDB29700ED43F4 /* ZJAddAptModel.swift */; };
+		3864C1C222C030FB00E13C22 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864C1C022C030FB00E13C22 /* ViewCell.swift */; };
 		7B54FEE5A75DE9B252CD847A /* Pods_DataBase_realmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489A551EEA7B3C17982D360A /* Pods_DataBase_realmSwift.framework */; };
 		A4F4614322B2DB1800A0831E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F4614222B2DB1800A0831E /* AppDelegate.swift */; };
 		A4F4614522B2DB1800A0831E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F4614422B2DB1800A0831E /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		3848693C22BDB28D00ED43F4 /* ZJAptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJAptViewModel.swift; sourceTree = "<group>"; };
 		3848693E22BDB29700ED43F4 /* ZJAddAptModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJAddAptModel.swift; sourceTree = "<group>"; };
+		3864C1C022C030FB00E13C22 /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		3C2FBAE53BB209514110047A /* Pods-DataBase-realmSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataBase-realmSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DataBase-realmSwift/Pods-DataBase-realmSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		489A551EEA7B3C17982D360A /* Pods_DataBase_realmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataBase_realmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F4613F22B2DB1800A0831E /* DataBase-realmSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DataBase-realmSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 			children = (
 				A4F4614222B2DB1800A0831E /* AppDelegate.swift */,
 				A4F4614422B2DB1800A0831E /* ViewController.swift */,
+				3864C1C022C030FB00E13C22 /* ViewCell.swift */,
 				3848693C22BDB28D00ED43F4 /* ZJAptViewModel.swift */,
 				3848693E22BDB29700ED43F4 /* ZJAddAptModel.swift */,
 				A4F4614622B2DB1800A0831E /* Main.storyboard */,
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3864C1C222C030FB00E13C22 /* ViewCell.swift in Sources */,
 				3848693D22BDB28D00ED43F4 /* ZJAptViewModel.swift in Sources */,
 				3848693F22BDB29700ED43F4 /* ZJAddAptModel.swift in Sources */,
 				A4F4614522B2DB1800A0831E /* ViewController.swift in Sources */,

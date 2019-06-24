@@ -5,3 +5,12 @@ Other articles: [Realm Tutorial: Getting Started](https://www.raywenderlich.com/
 
 ## Purpose
 Practice basic CRUD (Create, read, update & delete,) operations with the database.
+
+## Results
+Here is the results of saving data to local database by realm, sorting, and filtering.
+<p float="left">
+<img width="139" height="301" src="https://github.com/zijiazhai/DataBase-realmSwift/blob/master/github_photos/sortById.png">
+<img width="139" height="301" src="https://github.com/zijiazhai/DataBase-realmSwift/blob/master/github_photos/sortByPrice.png">
+<img width="139" height="301" src="https://github.com/zijiazhai/DataBase-realmSwift/blob/master/github_photos/sortByBathroom.png">
+</p>
+
